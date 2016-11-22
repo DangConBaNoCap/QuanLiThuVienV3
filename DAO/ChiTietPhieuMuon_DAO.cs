@@ -20,9 +20,18 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LoadDuLieu1(string MaPM,string MaSach)
+        {
+            string sTruyVan = "Select * From ChiTietPhieuMuon where MaPM="+MaPM;
+            sTruyVan += "and MaSach=" + MaSach;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static DataTable LoadDuLieuTheoMa(string MaPM)
         {
-            string sTruyVan = "Select * From ChiTietPhieuMuon where MaPM=";
+            string sTruyVan = "Select a.MaPM,a.MaSach, b.TenSach, a.TinhTrang,a.SoLuong,a.NgayHenTra,a.NgayTra From ChiTietPhieuMuon a,Sach b where a.MaSach=b.MaSach and MaPM=";
             sTruyVan += MaPM;
             con = DataProvider.KetNoi();
             DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
@@ -68,6 +77,21 @@ namespace DAO
             {
                 con = DataProvider.KetNoi();
                 string sTruyVan = string.Format("Delete From ChiTietPhieuMuon where MaPM = '{0}'and MaSach='{1}'", CTPM.MaPM, CTPM.MaSach);
+                DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
+                DataProvider.DongKetNoi(con);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool Xoa1(ChiTietPhieuMuon_DTO CTPM)
+        {
+            try
+            {
+                con = DataProvider.KetNoi();
+                string sTruyVan = string.Format("Delete From ChiTietPhieuMuon where MaPM = '{0}'", CTPM.MaPM);
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
                 return true;

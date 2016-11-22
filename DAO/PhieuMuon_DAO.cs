@@ -31,7 +31,7 @@ namespace DAO
         }
         public static DataTable LoadChiTiet()
         {
-            string sTruyVan = "Select a.MaPM, b.HoTen,a.NgayMuon,c.HoTen From PhieuMuon a,DocGia b,NhanVien c where a.MaDG=b.MaDocGia and a.MaNV=b.MaNV";
+            string sTruyVan = "Select a.MaPM,DocGia=b.HoTen,a.NgayMuon,NhanVien=c.HoTen From PhieuMuon a,DocGia b,NhanVien c where a.MaDG=b.MaDocGia and a.MaNV=c.MaNV";
             con = DataProvider.KetNoi();
             DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
             DataProvider.DongKetNoi(con);
