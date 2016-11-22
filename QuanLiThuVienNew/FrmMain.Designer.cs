@@ -47,16 +47,16 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
-            this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();
-            this.tileGroup4 = new DevExpress.XtraEditors.TileGroup();
-            this.label1 = new System.Windows.Forms.Label();
-            this.realTimeSource1 = new DevExpress.Data.RealTimeSource();
             this.tileItem1 = new DevExpress.XtraEditors.TileItem();
+            this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();
             this.tileItem2 = new DevExpress.XtraEditors.TileItem();
             this.tileItem10 = new DevExpress.XtraEditors.TileItem();
+            this.tileGroup4 = new DevExpress.XtraEditors.TileGroup();
             this.tileItem8 = new DevExpress.XtraEditors.TileItem();
             this.tileItem5 = new DevExpress.XtraEditors.TileItem();
             this.tileItem3 = new DevExpress.XtraEditors.TileItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.realTimeSource1 = new DevExpress.Data.RealTimeSource();
             this.SuspendLayout();
             // 
             // tileControl1
@@ -88,40 +88,11 @@
             this.tileGroup2.Items.Add(this.tileItem1);
             this.tileGroup2.Name = "tileGroup2";
             // 
-            // tileGroup3
-            // 
-            this.tileGroup3.Items.Add(this.tileItem2);
-            this.tileGroup3.Items.Add(this.tileItem10);
-            this.tileGroup3.Name = "tileGroup3";
-            // 
-            // tileGroup4
-            // 
-            this.tileGroup4.Items.Add(this.tileItem8);
-            this.tileGroup4.Items.Add(this.tileItem5);
-            this.tileGroup4.Items.Add(this.tileItem3);
-            this.tileGroup4.Name = "tileGroup4";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkViolet;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.label1.Location = new System.Drawing.Point(248, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "HỆ THỐNG QUẢN LÝ THƯ VIỆN";
-            // 
-            // realTimeSource1
-            // 
-            this.realTimeSource1.DisplayableProperties = null;
-            this.realTimeSource1.UseWeakEventHandler = true;
-            // 
             // tileItem1
             // 
             this.tileItem1.AppearanceItem.Normal.BackColor = System.Drawing.Color.DarkViolet;
             this.tileItem1.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.tileItem1.CurrentFrameIndex = 3;
             tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
             tileItemElement1.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch;
             tileItemElement1.Text = "";
@@ -160,6 +131,12 @@
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem1.Name = "tileItem1";
             // 
+            // tileGroup3
+            // 
+            this.tileGroup3.Items.Add(this.tileItem2);
+            this.tileGroup3.Items.Add(this.tileItem10);
+            this.tileGroup3.Name = "tileGroup3";
+            // 
             // tileItem2
             // 
             this.tileItem2.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -175,6 +152,7 @@
             this.tileItem2.Id = 1;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
+            this.tileItem2.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem2_ItemClick);
             // 
             // tileItem10
             // 
@@ -192,6 +170,13 @@
             this.tileItem10.Id = 11;
             this.tileItem10.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem10.Name = "tileItem10";
+            // 
+            // tileGroup4
+            // 
+            this.tileGroup4.Items.Add(this.tileItem8);
+            this.tileGroup4.Items.Add(this.tileItem5);
+            this.tileGroup4.Items.Add(this.tileItem3);
+            this.tileGroup4.Name = "tileGroup4";
             // 
             // tileItem8
             // 
@@ -235,6 +220,23 @@
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem3.Name = "tileItem3";
             this.tileItem3.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem3_ItemClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkViolet;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.label1.Location = new System.Drawing.Point(248, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(421, 31);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "HỆ THỐNG QUẢN LÝ THƯ VIỆN";
+            // 
+            // realTimeSource1
+            // 
+            this.realTimeSource1.DisplayableProperties = null;
+            this.realTimeSource1.UseWeakEventHandler = true;
             // 
             // FrmMain
             // 

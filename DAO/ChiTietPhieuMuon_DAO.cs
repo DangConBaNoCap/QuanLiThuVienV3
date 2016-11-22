@@ -20,6 +20,15 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LoadDuLieuTheoMa(string MaPM)
+        {
+            string sTruyVan = "Select * From ChiTietPhieuMuon where MaPM=";
+            sTruyVan += MaPM;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
 
         public static bool Them(ChiTietPhieuMuon_DTO CTPM)
         {

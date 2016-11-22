@@ -35,5 +35,11 @@ namespace QuanLiThuVienNew
             FrmDoiMatKhau _frmDoiMK = new FrmDoiMatKhau();
             _frmDoiMK.ShowDialog();
         }
+
+        private void tileItem2_ItemClick(object sender, TileItemEventArgs e)
+        {
+            FrmQLMuonTra frm = new FrmQLMuonTra();
+            frm.ShowDialog();
+        }
     }
 }
