@@ -38,8 +38,28 @@ namespace QuanLiThuVienNew
 
         private void tileItem2_ItemClick(object sender, TileItemEventArgs e)
         {
-            FrmQLMuonTra frm = new FrmQLMuonTra();
-            frm.ShowDialog();
+            try
+            {
+                FrmQLMuonTra _frm = new FrmQLMuonTra();
+                _frm.ShowDialog();
+            }
+           catch
+            {
+                MessageBox.Show("Lỗi");
+            }
+        }
+
+        private void tileItem10_ItemClick(object sender, TileItemEventArgs e)
+        {
+            try
+            {
+                FrmQLMuonTra _frm = new FrmQLMuonTra();
+                _frm.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi");
+            }
         }
     }
 }

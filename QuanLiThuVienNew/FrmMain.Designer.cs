@@ -92,7 +92,7 @@
             // 
             this.tileItem1.AppearanceItem.Normal.BackColor = System.Drawing.Color.DarkViolet;
             this.tileItem1.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.tileItem1.CurrentFrameIndex = 3;
+            this.tileItem1.CurrentFrameIndex = 1;
             tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
             tileItemElement1.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Stretch;
             tileItemElement1.Text = "";
@@ -170,6 +170,7 @@
             this.tileItem10.Id = 11;
             this.tileItem10.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem10.Name = "tileItem10";
+            this.tileItem10.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem10_ItemClick);
             // 
             // tileGroup4
             // 
