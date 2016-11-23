@@ -300,6 +300,8 @@ namespace QuanLiThuVienNew
                 ctpm.MaPM = int.Parse(txtMaPM.Text);
                 ctpm.MaSach = int.Parse(lsvDsDuocChon.Items[i].SubItems[5].Text);
                 ctpm.SoLuong = int.Parse(lsvDsDuocChon.Items[i].SubItems[2].Text);
+                ctpm.NgayHenTra = DateTime.Now;
+                ctpm.NgayTra = DateTime.Now;
                 ChiTietPhieuMuon_DAO.Them(ctpm);
             }
         }
