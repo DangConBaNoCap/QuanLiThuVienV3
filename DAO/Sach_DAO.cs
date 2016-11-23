@@ -115,6 +115,13 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
-
+        public static DataTable TimKiemSach(string dk)
+        {
+            string sTruyVan = " Select * From Sach " + dk;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
     }
 }

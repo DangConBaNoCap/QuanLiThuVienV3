@@ -22,6 +22,7 @@ namespace QuanLiThuVienNew
         private void FrmTimKiemSach_Load(object sender, EventArgs e)
         {
             dgvDausach.DataSource = Sach_DAO.TimKiem("");
+            
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -48,6 +49,33 @@ namespace QuanLiThuVienNew
                 dk = txtTim.Text.ToString();
                 dgvDausach.DataSource = Sach_DAO.TimKiem("where NgayNhap= '" + dk.Trim() + "'");
             }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FrmThemDS them = new FrmThemDS();
+            them.ShowDialog();
+        }
+        string XoaMa;
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            Sach_DTO entity = new Sach_DTO();
+            entity.MaSach = int.Parse(XoaMa);
+            Sach_DAO.Xoa(entity);
+            dgvDausach.DataSource = Sach_DAO.TimKiem("");
+        }
+
+        private void dgvDausach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            XoaMa = dgvDausach.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
+        }
+      
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+            FrmSuaSach suasach = new FrmSuaSach(XoaMa);
+            suasach.ShowDialog();
+            dgvDausach.DataSource = Sach_DAO.TimKiem("");
         }
     }
 }
