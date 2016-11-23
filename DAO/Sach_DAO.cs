@@ -105,6 +105,23 @@ namespace DAO
                 return false;
             }
         }
-
+        public static DataTable TimKiem(string dk)
+        {
+            string sTruyVan = " SELECT Sach.MaSach, Sach.TenSach, Sach.GiaBan," +
+                "Sach.MoTa, Sach.SoLuong, Sach.NgayNhap, ChuDe.TenCD, NhaXuatBan.TenNXB " +
+                "FROM Sach INNER JOIN ChuDe ON Sach.MaNXB = ChuDe.MaCD INNER JOIN NhaXuatBan ON Sach.MaNXB = NhaXuatBan.MaNXB " + dk;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+        public static DataTable TimKiemSach(string dk)
+        {
+            string sTruyVan = " Select * From Sach " + dk;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
     }
 }
