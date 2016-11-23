@@ -51,7 +51,8 @@ namespace QuanLiThuVienNew
 
         private void tileItem10_ItemClick(object sender, TileItemEventArgs e)
         {
-       
+            FrmDocGia frm = new FrmDocGia();
+            frm.ShowDialog();
         }
     }
 }

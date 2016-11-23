@@ -64,6 +64,12 @@
     <Compile Include="frmChinh.Designer.cs">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDocGia.Designer.cs">
+      <DependentUpon>FrmDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,11 +94,23 @@
     <Compile Include="FrmQLMuonTra.Designer.cs">
       <DependentUpon>FrmQLMuonTra.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSuaChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaChiTiet.Designer.cs">
+      <DependentUpon>FrmSuaChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSuaPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSuaPhieuMuon.Designer.cs">
       <DependentUpon>FrmSuaPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemChiTietPM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemChiTietPM.Designer.cs">
+      <DependentUpon>FrmThemChiTietPM.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThemTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -108,6 +126,9 @@
     <EmbeddedResource Include="frmChinh.resx">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDocGia.resx">
+      <DependentUpon>FrmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,8 +141,14 @@
     <EmbeddedResource Include="FrmQLMuonTra.resx">
       <DependentUpon>FrmQLMuonTra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaChiTiet.resx">
+      <DependentUpon>FrmSuaChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSuaPhieuMuon.resx">
       <DependentUpon>FrmSuaPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemChiTietPM.resx">
+      <DependentUpon>FrmThemChiTietPM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThemTaiKhoan.resx">
       <DependentUpon>FrmThemTaiKhoan.cs</DependentUpon>
