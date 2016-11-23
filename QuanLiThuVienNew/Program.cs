@@ -16,7 +16,7 @@ namespace QuanLiThuVienNew
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmTimKiemSach());
+            Application.Run(new FrmDangNhap());
         }
     }
 }
